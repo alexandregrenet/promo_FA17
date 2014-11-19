@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int fiba(int n){
+    if (n<2) return n;
+    return fiba(n-1)+fiba(n-2);
+    }
+
+int main()
+{
+    int x,n;
+    printf("entrez le nombre de terme: \n");
+    scanf("%d",&x);
+    printf("\n");
+    while(n<x){
+    fiba(n);
+    printf("[%d]: %d\n",n-1,fiba(n));
+    n++;
+    }
+    return 0;
+}
